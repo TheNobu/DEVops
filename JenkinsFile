@@ -5,7 +5,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh'''
-                    docker --version
+                    npm run dev
+                    npm run test:e2e
 
                 '''
                     
