@@ -5,8 +5,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                    npm start
-                    npm test
+                    docker-compose build
+                    docker-compose up
 
                 '''
             }
