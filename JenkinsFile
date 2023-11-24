@@ -4,11 +4,9 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh '''
-                    docker-compose build
-                    docker-compose up
-
-                '''
+                
+                    sh'docker-compose build'
+                    sh'docker-compose up'
             }
     }
 }
