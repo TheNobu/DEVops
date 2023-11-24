@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Build TADS') {
+        stage('Test') {
             steps {
                 sh '''
 
-                    java --version
-                    docker --version
-                    docker-compose --version
+                    npm install
+                    npm start
+                    npm test
 
                 '''
             }
