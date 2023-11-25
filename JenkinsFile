@@ -2,12 +2,20 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
+        stage('test'){
+            steps{
+                sh'''
+                    npm install
+                    npm test
+
+                '''
+            }
+        }
+        stage('build') {
             steps {
                 sh'''
-                    docker-compose build
+                    docker build
                     docker-compose up
-
                 '''
                     
             }
